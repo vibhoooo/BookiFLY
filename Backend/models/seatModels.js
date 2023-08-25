@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const seatSchema = mongoose.Schema(
 	{
 		seatNumber: {
-			type: String,
+			type: Number
 		},
 		pnr: {
-			type: String,
+			type: String
 		},
 		basePrice: {
-			type: String,
+			type: Number
 		}
 	}
 );
