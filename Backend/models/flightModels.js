@@ -26,29 +26,32 @@ const flightSchema = mongoose.Schema(
 		firstClass: {
 			rows: Number,
 			seatsInRow: Number,
-			seats: [Seat],
-			required: [
-				true,
-				"Please enter seat configuration for firstClass!"
-			]
+			basePrice: Number,
+			seats: [Seat.schema],
+			isRequired: { 
+				type: Boolean, 
+				default: true 
+			}
 		},
 		businessClass: {
 			rows: Number,
 			seatsInRow: Number,
-			seats: [Seat],
-			required: [
-				true,
-				"Please enter seat configuration for businessClass!"
-			]
+			basePrice: Number,
+			seats: [Seat.schema],
+			isRequired: {
+				type: Boolean,
+				default: true
+			}
 		},
 		economyClass: {
 			rows: Number,
 			seatsInRow: Number,
-			seats: [Seat],
-			required: [
-				true,
-				"Please enter seat configuration for economyClass!"
-			]
+			basePrice: Number,
+			seats: [Seat.schema],
+			isRequired: {
+				type: Boolean,
+				default: true
+			}
 		}
 	},
 	{ 
