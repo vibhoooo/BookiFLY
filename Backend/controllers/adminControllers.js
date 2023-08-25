@@ -2,6 +2,8 @@ const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Admin = require("../models/adminModels");
+const Flight = require("../models/flightModels");
+const Seat = require("../models/seatModels");
 // @desc Sign Up
 // @route POST /admins/signup
 // @access public
@@ -122,7 +124,93 @@ const loginAdmin = asyncHandler(
 		}
 	}
 );
+// @desc Post a flight
+// @route POST /admins/post
+// @access private
+const postFlight = asyncHandler(
+	async (req, res) => {
+		const { type, origin, destination, firstClass, businessClass, economyClass } = req.body;
+		if(!type || !origin || !destination || !firstClass || !businessClass || !economyClass) {
+			res
+				.status(
+					400
+				);
+			throw new Error(
+				"All fields are mandatory!"
+			);
+		}		
+		const flight = await Flight.create(
+			{
+				type,
+				origin,
+				destination,
+				firstClass,
+				businessClass,
+				economyClass
+			}
+		);
+		generateSeatsAndPNRs(flight);
+		await flight.save();
+		if(flight) {
+			res
+				.status(
+					201
+				)
+				.json(
+					{
+						type,
+						origin,
+						destination,
+						firstClass: flight.firstClass.seats,
+						businessClass: flight.businessClass.seats,
+						economyClass: flight.economyClass.seats
+					}
+				);
+		}
+		else {
+			res
+				.status(
+					500
+				);
+			throw new Error(
+				"Flight adding failed"
+			);
+		}
+	}
+);
+const generateSeatsAndPNRs = (flight) => {
+	const classes = ["firstClass", "businessClass", "economyClass"];
+	for(const className of classes) {
+		const classData = flight[className];
+		const { rows, seatsInRow, basePrice } = classData;
+		let seatNumber = 1;
+		for (let row = 1; row <= rows; ++row) {
+			for (let seatInRow = 1; seatInRow <= seatsInRow; ++seatInRow) {
+				const seat = new Seat(
+					{
+						seatNumber,
+						pnr: generatePNR(className, seatNumber),
+						basePrice: basePrice
+					}
+				);
+				flight[className].seats.push(seat);
+				++seatNumber;
+			}
+		}
+	}
+};
+const generatePNR = (className, seatNumber) => {
+	const classPrefix = className.slice(0, 1).toUpperCase();
+	const alphanumericChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+	let pnr = classPrefix + seatNumber;
+	for (let i = 0; i < 6; ++i) {
+		const randomIndex = Math.floor(Math.random() * alphanumericChars.length);
+		pnr += alphanumericChars.charAt(randomIndex);
+	}
+	return pnr;
+};
 module.exports = {
 	signupAdmin,
-	loginAdmin
+	loginAdmin,
+	postFlight
 };
