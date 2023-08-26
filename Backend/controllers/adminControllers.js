@@ -10,7 +10,7 @@ const Seat = require("../models/seatModels");
 const signupAdmin = asyncHandler(
 	async (req, res) => {
 		const { adminname, email, password } = req.body;
-		if (!adminname || !email || !password) {
+		if(!adminname || !email || !password) {
 			res
 				.status(
 					400
@@ -24,7 +24,7 @@ const signupAdmin = asyncHandler(
 				email
 			}
 		);
-		if (adminAvailable) {
+		if(adminAvailable) {
 			res
 				.status(
 					400
@@ -44,7 +44,7 @@ const signupAdmin = asyncHandler(
 				password: hashedPassword
 			}
 		);
-		if (admin) {
+		if(admin) {
 			res
 				.status(
 					201
@@ -73,7 +73,7 @@ const signupAdmin = asyncHandler(
 const loginAdmin = asyncHandler(
 	async (req, res) => {
 		const { email, password } = req.body;
-		if (!email || !password) {
+		if(!email || !password) {
 			res
 				.status(
 					400
@@ -87,7 +87,7 @@ const loginAdmin = asyncHandler(
 				email
 			}
 		);
-		if (admin && (await bcrypt.compare(password, admin.password))) {
+		if(admin && (await bcrypt.compare(password, admin.password))) {
 			const accessToken = jwt.sign(
 				{
 					admin: {
