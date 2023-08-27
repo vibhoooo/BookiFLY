@@ -70,6 +70,11 @@ Relationship Handling in MongoDB
 `npm i cors`<br/>
 ## Running the server
 `npm run dev`
+## Content of .env file
+PORT<br/>
+CONNECTION_STRING -> for connecting the our Database<br/>
+ACCESS_TOKEN_SECRET_USER<br/>
+ACCESS_TOKEN_SECRET_ADMIN
 ## API DOCS
 ### For Admins
 | CRUD Operation | HTTP Method | API Endpoint | Type | 
