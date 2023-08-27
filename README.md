@@ -76,4 +76,30 @@ Relationship Handling in MongoDB
 | Select a seat | POST | /users/selectSeat | private |
 ## API Testing
 API testing is done by **Thunder Client**
-## Images 
+## Images
+### For Admins
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/c166bf2f-2d20-44cf-b95e-ff5551430815"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/015cf7c2-6b44-496d-b6ba-365f14acbd95"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/33c4e6fa-a573-4bee-9a05-b857f6b04fff"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/35636caf-fb9e-48cd-949e-b33fac20699c"><br/>
+### For Users
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/361e6b84-2dd1-4b76-98c8-03e93a996198"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/0274bf9d-1da0-4d71-bc4f-b8769b68ac00"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/4bec8e55-7cd2-40a6-9865-845d18cb1a7c"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/2ce79ba0-37ef-4141-849e-5f5dc72ed94e"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/65df732e-ced0-4abf-97a5-6ca9646e1ffc"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/b16a5259-c108-4842-8de5-ba5949d98067"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/79c8c8a6-975b-4a67-b149-26bf871957f2"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/d4840fd1-e87d-444a-b662-1d1581493ffa"><br/>
+<img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/24b5cd48-d049-4532-97b5-a91277a03db6">
+
+
+
+
+
+
+
+
+
+
+
