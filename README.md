@@ -91,7 +91,7 @@ ACCESS_TOKEN_SECRET_ADMIN
 | Select a flight | POST | /users/selectFlight | private |
 | Select a seat | POST | /users/selectSeat | private |
 ## API Testing
-API testing is done by **Thunder Client**
+API testing is done by **Thunder Client** and **Postman** is used for publishing the API DOCS provided in the description.
 ## Images
 ### For Admins
 <img width="1440" alt="image" src="https://github.com/vibhoooo/BookiFLY/assets/96656912/c166bf2f-2d20-44cf-b95e-ff5551430815"><br/>
