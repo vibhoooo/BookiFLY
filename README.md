@@ -72,7 +72,7 @@ Relationship Handling in MongoDB
 `npm run dev`
 ## Content of .env file
 PORT<br/>
-CONNECTION_STRING -> for connecting the our Database<br/>
+CONNECTION_STRING -> for connecting to our Database<br/>
 ACCESS_TOKEN_SECRET_USER<br/>
 ACCESS_TOKEN_SECRET_ADMIN
 ## API DOCS
