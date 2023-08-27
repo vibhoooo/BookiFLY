@@ -26,13 +26,13 @@ Implementation of Protected Routes<br/>
 Relationship Handling in MongoDB
 ## API DOCS
 ### For Admins
-| CRUD Operations | HTTP Methods | API Endpoints | Type | 
+| CRUD Operation | HTTP Method | API Endpoint | Type | 
 | --------------- | ------------ | ----------------- | ----------------- |
 | Sign Up | POST | /admins/signup | public |
 | Login | POST | /admins/login | public |
 | Post a flight | POST | /admins/post | private |
 ### For Users
-| CRUD Operations | HTTP Methods | API Endpoints | Type | 
+| CRUD Operation | HTTP Method | API Endpoint | Type | 
 | --------------- | ------------ | ----------------- | ----------------- |
 | Sign Up | POST | /users/signup | public |
 | Login | POST | /users/login | public |
