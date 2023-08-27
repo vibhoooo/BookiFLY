@@ -59,6 +59,17 @@ JWT Token Verification<br/>
 Implementation of Public Routes<br/>
 Implementation of Protected Routes<br/>
 Relationship Handling in MongoDB
+## Dependencies
+`npm i nodemon`<br/>
+`npm i express`<br/>
+`npm i mongoose`<br/>
+`npm i express-async-handler`<br/>
+`npm i bcrypt`<br/>
+`npm i jsonwebtoken`<br/>
+`npm i dotenv`<br/>
+`npm i cors`<br/>
+## Running the server
+`npm run dev`
 ## API DOCS
 ### For Admins
 | CRUD Operation | HTTP Method | API Endpoint | Type | 
